@@ -1,1 +1,77 @@
 @import "reset.css";
+
+/*.userCardHeight {
+    height: 200px;
+}*/
+
+/*
+.userCard {
+    height: 200px;
+}
+
+.userImageContainer {
+    height: 100%;
+}
+
+.userInfoContainer {
+    height: inherit;
+}
+*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    --user-card-height: 200px;
+    --user-card-width: 500px;
+}
+
+body {
+    background: #4d91f6;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.userCard {
+
+    height: var(--user-card-height);
+    width: var(--user-card-width);
+    border-radius: 8px;
+    background: white;
+    overflow: hidden;
+    margin: 30px;
+}
+
+.userCard > * {
+    display: inline-block;
+}
+
+.userImageContainer {
+    height: var(--user-card-height);
+    width: var(--user-card-height);
+    overflow: hidden;
+}
+
+.userImageContainer > img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+}
+
+
+.userInfoContainer {
+    height: var(--user-card-height);
+    vertical-align: top;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+}
+
+.userStateItem {
+    display: inline-block;
+}
